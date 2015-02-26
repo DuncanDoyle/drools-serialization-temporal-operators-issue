@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+	<!--  First KieBase that contains the initial rules. -->
+    <kbase name="rules" equalsBehavior="equality" eventProcessingMode="stream" packages="rules" default="true">
+        <ksession name="ksession-rules" default="true" type="stateful" clockType="pseudo"/>
+    </kbase>
+    
+    <!--  Second KieBase that contains the new rules. -->
+    <kbase name="newRules" equalsBehavior="equality" eventProcessingMode="stream" packages="newRules" default="false">
+        <ksession name="ksession-newRules" default="false" type="stateful" clockType="pseudo"/>
+    </kbase>
+    
+    
+</kmodule>
